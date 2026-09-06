@@ -111,9 +111,9 @@
     .proof .lead{color:rgba(244,241,232,.7)}
     .proof .section-head{border-bottom:1px solid rgba(244,241,232,.2);padding-bottom:50px}
     .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    blockquote{margin:0;border:1px solid rgba(244,241,232,.22);padding:28px;min-height:276px;display:flex;flex-direction:column;justify-content:space-between}
-    blockquote p{font-family:var(--serif);font-size:25px;line-height:1.12;margin:0}
-    blockquote footer{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;opacity:.55;line-height:1.7}
+    blockquote{margin:0;border:1px solid rgba(244,241,232,.22);padding:32px 28px;min-height:250px;display:flex;flex-direction:column;justify-content:center}
+    blockquote:before{content:"";display:block;width:34px;height:3px;background:var(--acid);margin-bottom:24px;flex:none}
+    blockquote p{font-family:var(--serif);font-size:25px;line-height:1.14;margin:0}
 
     /* about bridge */
     .about{display:grid;grid-template-columns:.72fr 1.28fr;gap:66px;align-items:start}
@@ -377,15 +377,12 @@
       <div class="quote-grid">
         <blockquote>
           <p>"Kevin created an atmosphere of psychological safety, enabling many valuable cross-functional conversations during our recent workshop."</p>
-          <footer>Workshop participant<br>Operations function<br>Global manufacturer</footer>
         </blockquote>
         <blockquote>
           <p>"The facilitator explained concepts well. I appreciated when he slowed down at times to make sure nobody in the room was left behind."</p>
-          <footer>Workshop participant<br>Finance function<br>Global manufacturer</footer>
         </blockquote>
         <blockquote>
           <p>"This workshop was time well-spent. It opened my eyes to new ways of using AI."</p>
-          <footer>Workshop participant<br>Supply chain function<br>Global manufacturer</footer>
         </blockquote>
       </div>
     </div>
@@ -502,7 +499,6 @@
           usually within a day or two.
         </p>
       </div>
-
       <a class="mailcard" href="mailto:hello@kevinsotka.com?subject=Hello%20from%20kevinsotka.com">
         <div class="label">Write to me</div>
         <div class="addr">
