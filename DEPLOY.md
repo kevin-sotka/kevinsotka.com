@@ -118,18 +118,14 @@ and that `www.kevinsotka.com` redirects to it.
 
 ## 6. The email address
 
-The page publishes `hello@kevinsotka.com`. Set it up before you share the site anywhere.
+`hello@kevinsotka.com` is already live, running on Namecheap's free email forwarding. Incoming
+mail arrives in the inbox it forwards to, so the address on the page works today.
 
-Namecheap's free **Email Forwarding**, on the Domain tab, will forward that address to a
-mailbox you already read. It takes about five minutes and costs nothing. It is receive-only
-by design, so mail arrives but replies go out from whatever account you reply with.
-
-To reply as `hello@kevinsotka.com`, you need a real mailbox. Namecheap's Private Email
-Launch plan is the cheap option and supports IMAP and SMTP, which means you can add it to
-Gmail as a send-as identity and keep working from the inbox you already check. Check their
-current pricing, and note there is a free trial.
-
-Either way, do not leave the address dead. The page promises a human answers it.
+One thing to know about it: forwarding is receive-only by design. Replies go out from whichever
+account you answer with, not from `hello@kevinsotka.com`. If that bothers you, a real mailbox
+fixes it. Namecheap's Private Email Launch plan supports IMAP and SMTP, which lets you add the
+address to Gmail as a send-as identity and reply from it while still working out of the inbox you
+already check. Check their current pricing, and note there is a free trial.
 
 ---
 
