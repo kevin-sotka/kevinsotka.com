@@ -4,36 +4,31 @@ First-time setup, start to finish. After this, deploying is just `git push`.
 
 ---
 
-## 1. Create the GitHub repository
+## 1. Push
 
-If it does not exist yet, create a repository named `kevinsotka.com` under your account
-(`kevin-sotka`). Either way works:
+The repository already exists at https://github.com/kevin-sotka/kevinsotka.com. It is public
+and empty, this folder is already a git repository with everything committed on `main`, and
+`origin` is already pointed at it.
 
-**With the GitHub CLI**
-
-```bash
-brew install gh          # only if you do not have it
-gh auth login            # follow the browser prompt
-cd path/to/kevinsotka.com/site
-gh repo create kevinsotka.com --public --source=. --remote=origin --push
-```
-
-**Through the website**
-
-Go to https://github.com/new, name it `kevinsotka.com`, make it public, and do not add a
-README or license (this folder already has one). Then from this folder:
+One command left:
 
 ```bash
-git init -b main
-git add .
-git commit -m "Publish kevinsotka.com"
-git remote add origin https://github.com/kevin-sotka/kevinsotka.com.git
+cd ~/Meatbag_Labs/kevinsotka.com/site
 git push -u origin main
 ```
 
-Public is the right choice here. The repo holds one marketing page and no secrets. The
-strategy documents, evidence library, and archive live one folder up and are deliberately
-not part of this repository.
+If git asks for a password, it wants a personal access token rather than your account
+password. The easier route is the GitHub CLI, which handles auth in a browser window:
+
+```bash
+brew install gh
+gh auth login
+git push -u origin main
+```
+
+Public is the right choice for this repository. It holds one marketing page and no secrets.
+The strategy documents, evidence library, and archive live one folder up and are deliberately
+outside this repository.
 
 ---
 
