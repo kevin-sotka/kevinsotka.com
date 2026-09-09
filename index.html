@@ -133,6 +133,31 @@
     .project.wide .go{border-top-color:rgba(244,241,232,.25)}
     .project .go a{border-bottom:2px solid var(--orange);padding-bottom:2px}
 
+    .project-badge{width:52px;height:52px;border:1px solid var(--ink);background:var(--paper);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:16px;flex:none}
+    .project-badge img{width:100%;height:100%;object-fit:contain}
+    .project-badge svg{width:62%;height:62%}
+    .project.wide .project-badge{background:var(--white)}
+
+    /* signals */
+    .signals{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    .signal{border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:28px;display:flex;flex-direction:column}
+    .signal .tag{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.1em;opacity:.6}
+    .signal h3{font-size:25px;line-height:1.05;letter-spacing:-.04em;margin:16px 0 22px;font-weight:900}
+    .signal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 12px;margin-bottom:20px}
+    .signal-num{display:block;font-size:25px;font-weight:900;letter-spacing:-.04em;line-height:1}
+    .signal-label{display:block;font-size:11px;color:rgba(244,241,232,.58);margin-top:6px}
+    .signal-heat{display:grid;grid-template-columns:repeat(30,1fr);gap:2px;margin-bottom:20px}
+    .signal-heat i{display:block;aspect-ratio:1/1;border-radius:1px;background:rgba(244,241,232,.1);font-style:normal}
+    .signal-heat i.h1{background:rgba(215,255,63,.35)}
+    .signal-heat i.h2{background:rgba(215,255,63,.68)}
+    .signal-heat i.h3{background:var(--acid)}
+    .signal-chart{display:block;background:var(--white);border:1px solid var(--ink);padding:14px 10px;margin-bottom:20px}
+    .signal-chart img{display:block;width:100%;height:auto}
+    .signal-note{margin:0 0 20px;font-size:14.5px;color:rgba(244,241,232,.75)}
+    .signal-note em{color:var(--acid)}
+    .signal .go{margin-top:auto;font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;border-top:1px solid rgba(244,241,232,.25);padding-top:14px}
+    .signal .go a{border-bottom:2px solid var(--acid);padding-bottom:2px}
+
     /* elsewhere */
     .elsewhere{background:var(--acid)}
     .elsewhere-inner{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:end}
@@ -177,7 +202,7 @@
     }
     @media(max-width:850px){
       .navlinks{display:none}
-      .hero,.section-head,.about,.cta-inner,.elsewhere-inner,.callout{grid-template-columns:1fr}
+      .hero,.section-head,.about,.cta-inner,.elsewhere-inner,.callout,.signals{grid-template-columns:1fr}
       .hero{padding-top:54px}
       .hero-card{max-width:470px}
       .callout{gap:20px}
@@ -191,6 +216,7 @@
       .step,.stat{border-right:0;border-bottom:1px solid var(--ink)}
       .step:last-child,.stat:last-child{border-bottom:0}
       .project.wide{grid-column:auto}
+      .signal-grid{grid-template-columns:repeat(2,1fr)}
       .hero-card{transform:none;box-shadow:9px 9px 0 var(--orange)}
       .card-big{font-size:58px}
     }
@@ -427,22 +453,44 @@
 
       <div class="projects">
         <article class="project wide">
-          <div class="tag">Agent infrastructure</div>
+          <div class="project-badge"><img src="assets/doc-sodclaw.png" alt="Doc, the mascot I gave my orchestrator" loading="lazy"></div>
+          <div class="tag">Agent infrastructure · SodClaw</div>
           <div>
             <h3>An orchestration system I run my own work on</h3>
             <p>A personal agent orchestrator with a persistent context brain, subagent workflows, a tracked portfolio with value and complexity scoring, and a dashboard to see the whole thing at once. My favorite part is the least glamorous: a budget guard that stops a run before it overspends, and a verifier agent that grades the work before anything reaches me.</p>
             <p>It is the most honest answer I can give to "do you actually use this stuff." I have been living inside it for a year.</p>
           </div>
-          <div class="go">Built and maintained continuously</div>
+          <div class="go">Built and maintained continuously · <a href="https://github.com/kevin-sotka/SodClaw">github.com/kevin-sotka/SodClaw</a></div>
         </article>
 
         <article class="project">
+          <div class="project-badge"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 20h12l4 6h8l4-6h8v4l-4 14H10L6 24z" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="17" cy="29" r="2.4" fill="var(--acid)"/><circle cx="31" cy="29" r="2.4" fill="var(--orange)"/></svg></div>
           <div class="tag">Games</div>
           <div>
             <h3>Browser games, and a studio to keep them in</h3>
             <p>Several small games, some finished and published, some still only a good title and a bad idea. They live together under a studio name so they stop cluttering my desktop.</p>
           </div>
           <div class="go"><a href="https://hitfactory.games">hitfactory.games</a></div>
+        </article>
+
+        <article class="project">
+          <div class="project-badge"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="30" width="36" height="4" fill="var(--ink)"/><path d="M12 30l3-8h18l3 8" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><rect x="19" y="12" width="10" height="10" fill="none" stroke="var(--ink)" stroke-width="2.5"/><circle cx="34" cy="10" r="2.6" fill="var(--orange)"/><path d="M34 10l3.5-3.5M34 10l4.5.5M34 10l-.5 4.5" stroke="var(--orange)" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="tag">Game pipeline</div>
+          <div>
+            <h3>Foundry, from prompt to playable</h3>
+            <p>A pipeline I built to turn a one-line idea into a finished browser game: design, build, polish, test, and ship. Cheaper models handle the mechanical stages, better ones are reserved for the judgment calls.</p>
+          </div>
+          <div class="go">In active use</div>
+        </article>
+
+        <article class="project">
+          <div class="project-badge"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="19" width="17" height="21" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/><rect x="15" y="13" width="17" height="21" fill="var(--acid)" stroke="var(--ink)" stroke-width="2"/><rect x="23" y="7" width="17" height="21" fill="var(--orange)" stroke="var(--ink)" stroke-width="2"/></svg></div>
+          <div class="tag">Batch pipeline</div>
+          <div>
+            <h3>Giga Foundry, the same idea at scale</h3>
+            <p>The version of Foundry built to run the whole pipeline across many games in one batch instead of one at a time, useful when I want to compare several ideas before committing to any of them.</p>
+          </div>
+          <div class="go">Runs in batches</div>
         </article>
 
         <article class="project">
@@ -463,6 +511,52 @@
           <div class="go">In progress, slowly</div>
         </article>
 
+        <article class="project">
+          <div class="project-badge"><img src="assets/mbm-cover.jpg" alt="The cover of the novel I'm drafting" loading="lazy"></div>
+          <div class="tag">Fiction, one chapter at a time</div>
+          <div>
+            <h3>A drafting pipeline for an actual novel</h3>
+            <p>A skill that drafts chapter prose from an outline, for a novel I am currently writing. It does not replace editing. It gets a rough chapter onto the page fast enough that editing is where I actually spend my time.</p>
+          </div>
+          <div class="go">Chapters in progress</div>
+        </article>
+
+      </div>
+
+      <div class="signals">
+        <article class="signal">
+          <div class="tag">Field note</div>
+          <h3>Claude Code, lately</h3>
+          <div class="signal-grid">
+            <div><span class="signal-num">25</span><span class="signal-label">Sessions</span></div>
+            <div><span class="signal-num">15,336</span><span class="signal-label">Messages</span></div>
+            <div><span class="signal-num">10M</span><span class="signal-label">Total tokens</span></div>
+            <div><span class="signal-num">26</span><span class="signal-label">Active days</span></div>
+            <div><span class="signal-num">5d</span><span class="signal-label">Longest streak</span></div>
+            <div><span class="signal-num">7 PM</span><span class="signal-label">Peak hour</span></div>
+          </div>
+          <div class="signal-heat" aria-hidden="true">
+            <i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h1"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h2"></i><i class="h3"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h2"></i><i class="h2"></i><i class="h0"></i>
+            <i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h1"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h2"></i><i class="h0"></i><i class="h0"></i>
+            <i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h3"></i><i class="h0"></i><i class="h3"></i><i class="h2"></i><i class="h0"></i><i class="h0"></i>
+            <i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h3"></i><i class="h3"></i><i class="h1"></i><i class="h0"></i><i class="h0"></i><i class="h2"></i><i class="h1"></i><i class="h1"></i><i class="h2"></i>
+            <i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h3"></i><i class="h1"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i>
+            <i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h2"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h3"></i><i class="h0"></i><i class="h1"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h1"></i><i class="h2"></i>
+            <i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h0"></i><i class="h1"></i><i class="h1"></i><i class="h1"></i><i class="h0"></i><i class="h2"></i><i class="h3"></i>
+          </div>
+          <p class="signal-note">Favorite model, Opus 5. I have now used roughly 161 times more tokens than there are in <em>The Great Gatsby</em>.</p>
+          <div class="go"><a href="https://claude.com/code">claude.com/code</a></div>
+        </article>
+
+        <article class="signal">
+          <div class="tag">Field note</div>
+          <h3>GitHub, actually</h3>
+          <a class="signal-chart" href="https://kevin-sotka.github.io/" aria-label="Kevin Sotka's GitHub contribution history">
+            <img src="https://ghchart.rshah.org/d7ff3f/kevin-sotka" alt="GitHub contribution graph for kevin-sotka" loading="lazy" width="663" height="104">
+          </a>
+          <p class="signal-note">Public repos and commit history, kept current by GitHub itself, not by me remembering to update a screenshot.</p>
+          <div class="go"><a href="https://kevin-sotka.github.io/">kevin-sotka.github.io</a></div>
+        </article>
       </div>
     </div>
   </section>
