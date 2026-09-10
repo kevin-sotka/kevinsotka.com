@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kevin Sotka · Learn. Teach. Be Curious.</title>
+  <title>Kevin Sotka · Learn. Teach. Create.</title>
   <meta name="description" content="Kevin Sotka works in business strategy, AI enablement, program management, and operations. He finds the gaps in how work gets done and steps in to close them.">
+  <link rel="icon" type="image/png" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
@@ -31,33 +34,41 @@
 
     /* nav */
     .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--line)}
-    .mark{font-weight:900;letter-spacing:-.06em;font-size:22px}
+    .mark{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.06em;font-size:22px}
     .mark span{font-family:var(--serif);font-weight:400;font-style:italic}
+    .mark img{width:30px;height:30px;border-radius:6px}
     .navlinks{display:flex;gap:26px;font-size:14px}
     .navlinks a{opacity:.7}.navlinks a:hover{opacity:1}
     .navcta{padding:11px 16px;border:1px solid var(--ink);border-radius:999px;font-weight:800;font-size:13px;background:var(--acid)}
     .navcta:hover{background:var(--acid-dk)}
 
     /* hero */
-    .hero{padding:74px 0 68px;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+    .hero{padding:74px 0 68px}
+    .hero-top{max-width:760px}
     .eyebrow{display:inline-flex;align-items:center;gap:9px;font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:26px}
     .dot{width:9px;height:9px;background:var(--orange);border-radius:50%;display:inline-block}
     h1{font-size:clamp(54px,7.6vw,112px);line-height:.88;letter-spacing:-.075em;margin:0 0 32px;font-weight:900}
     .hero-copy{font-size:clamp(18px,1.9vw,25px);line-height:1.3;max-width:640px}
     .hero-copy + .hero-copy{font-size:clamp(16px,1.5vw,19px);color:var(--ink-70);margin-top:18px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
     .button{display:inline-flex;padding:15px 21px;border-radius:999px;font-weight:800;font-size:15px;border:1px solid var(--ink);transition:transform .18s ease,background .18s ease}
     .button:hover{transform:translateY(-2px)}
     .primary{background:var(--ink);color:var(--paper)}
     .secondary{background:transparent}
 
-    .hero-card{background:var(--ink);color:var(--paper);padding:30px;border-radius:3px;transform:rotate(2deg);box-shadow:14px 14px 0 var(--orange);position:relative;overflow:hidden}
-    .hero-card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-70px;background:var(--acid);filter:blur(1px)}
+    .hero-fork{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px;align-items:stretch}
+    .fork-path{border:1px solid var(--ink);background:var(--white);padding:30px;display:flex;flex-direction:column;gap:16px}
+    .fork-label{font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--orange)}
+    .fork-path p{margin:0;font-size:17px;line-height:1.4;max-width:42ch;color:var(--ink-70)}
+    .fork-path .button{align-self:flex-start}
+    .fork-path .hero-card{margin-top:auto}
+
+    .hero-card{background:var(--ink);color:var(--paper);padding:26px;border-radius:3px;transform:rotate(1.4deg);box-shadow:11px 11px 0 var(--orange);position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-60px;top:-60px;background:var(--acid);filter:blur(1px)}
     .card-label{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.12em;opacity:.65;position:relative}
-    .card-big{font-size:70px;line-height:.85;letter-spacing:-.07em;font-weight:900;margin:70px 0 15px}
-    .card-big small{font-size:26px;letter-spacing:-.03em}
-    .card-text{font-size:17px;max-width:320px}
-    .scribble{font-family:var(--serif);font-style:italic;color:var(--acid);font-size:22px;line-height:1.25;margin-top:34px}
+    .card-big{font-size:56px;line-height:.85;letter-spacing:-.07em;font-weight:900;margin:36px 0 12px}
+    .card-big small{font-size:22px;letter-spacing:-.03em}
+    .card-text{font-size:15.5px;max-width:320px}
+    .scribble{font-family:var(--serif);font-style:italic;color:var(--ink-70);font-size:19px;line-height:1.3;margin-top:auto}
 
     /* ticker */
     .ticker{background:var(--acid);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden;white-space:nowrap}
@@ -123,6 +134,11 @@
     .note{font:700 13px var(--mono);padding-top:20px;border-top:1px solid var(--line);line-height:1.65;text-transform:none;letter-spacing:0}
 
     /* projects */
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+    .filter{font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;padding:10px 16px;border:1px solid var(--ink);border-radius:999px;background:var(--paper);cursor:pointer}
+    .filter:hover{background:var(--white)}
+    .filter.active{background:var(--ink);color:var(--paper)}
+    .project[hidden]{display:none}
     .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .project{border:1px solid var(--ink);padding:26px;background:var(--white);display:flex;flex-direction:column;min-height:300px}
     .project.wide{grid-column:span 2;background:var(--ink);color:var(--paper)}
@@ -202,11 +218,11 @@
     }
     @media(max-width:850px){
       .navlinks{display:none}
-      .hero,.section-head,.about,.cta-inner,.elsewhere-inner,.callout,.signals{grid-template-columns:1fr}
+      .hero-fork,.section-head,.about,.cta-inner,.elsewhere-inner,.callout,.signals{grid-template-columns:1fr}
       .hero{padding-top:54px}
       .hero-card{max-width:470px}
       .callout{gap:20px}
-      .pillars,.phases,.quote-grid{grid-template-columns:1fr}
+      .pillars,.phases,.quote-grid,.formats{grid-template-columns:1fr}
       section{padding:74px 0}
     }
     @media(max-width:560px){
@@ -218,19 +234,20 @@
       .project.wide{grid-column:auto}
       .signal-grid{grid-template-columns:repeat(2,1fr)}
       .hero-card{transform:none;box-shadow:9px 9px 0 var(--orange)}
-      .card-big{font-size:58px}
+      .card-big{font-size:46px}
     }
   </style>
 </head>
 <body>
 
 <header class="wrap nav">
-  <a class="mark" href="#">KEVIN <span>Sotka</span></a>
+  <a class="mark" href="#"><img src="assets/logo.png" alt="" width="30" height="30">KEVIN <span>Sotka</span></a>
   <nav class="navlinks">
+    <a href="training.html">Corporate training</a>
     <a href="#work">The work</a>
     <a href="#method">How I work</a>
     <a href="#words">References</a>
-    <a href="#build">What I build</a>
+    <a href="#build">The Lab</a>
   </nav>
   <a class="navcta" href="#hello">Say hello</a>
 </header>
@@ -238,30 +255,34 @@
 <main>
 
   <div class="wrap hero">
-    <div>
+    <div class="hero-top">
       <div class="eyebrow"><i class="dot"></i> Strategy / AI enablement / programs / operations</div>
-      <h1>Learn.<br>Teach.<br><em>Be curious.</em></h1>
+      <h1>Learn.<br>Teach.<br><em>Create.</em></h1>
       <p class="hero-copy">
         I have built a career out of noticing the gap between how work gets done and how it could
-        be done, and then being the person who steps in to close it.
+        be done, and then being the person who steps in to close it. Lately that splits two ways.
       </p>
-      <p class="hero-copy">
-        Lately that has mostly meant teaching non-technical teams to find, build, and fund their
-        own AI use cases. Before that it meant running programs, running operations, and making
-        the case for change to the people holding the budget.
-      </p>
-      <div class="hero-actions">
-        <a class="button primary" href="#hello">Say hello</a>
-        <a class="button secondary" href="#build">See what I build</a>
-      </div>
     </div>
 
-    <aside class="hero-card">
-      <div class="card-label">Field note / year one</div>
-      <div class="card-big">$12M<small>+</small></div>
-      <div class="card-text">in additional first-year value identified by the teams I taught, using their own ideas.</div>
-      <div class="scribble">The trick was never "use AI."<br>It was "use AI here."</div>
-    </aside>
+    <div class="hero-fork">
+      <div class="fork-path fork-corp">
+        <div class="fork-label">Learn. Teach.</div>
+        <p>I train corporate teams to use AI productively in their own work, without the slop.</p>
+        <a class="button primary" href="training.html">Explore Corporate AI Training</a>
+        <aside class="hero-card">
+          <div class="card-label">Field note / year one</div>
+          <div class="card-big">$12M<small>+</small></div>
+          <div class="card-text">in additional first-year value identified by the teams I taught, using their own ideas.</div>
+        </aside>
+      </div>
+
+      <div class="fork-path fork-curious">
+        <div class="fork-label">Create.</div>
+        <p>When I am not training, I build games, tools, agent infrastructure, and audio, because I cannot stop.</p>
+        <a class="button secondary" href="#build">Browse Creative Projects</a>
+        <div class="scribble">The trick was never "use AI."<br>It was "use AI here."</div>
+      </div>
+    </div>
   </div>
 
   <div class="ticker"><div class="ticker-inner">
@@ -384,6 +405,10 @@
         <div class="lbl">My unofficial rule</div>
         <div class="line">If the process is already failing, automating it just makes it fail faster.</div>
       </div>
+
+      <p style="margin-top:28px">
+        <a href="training.html" style="font:700 13px var(--mono);text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid var(--orange);padding-bottom:2px">Bring this to your team &rarr;</a>
+      </p>
     </div>
   </section>
 
@@ -441,18 +466,27 @@
   <section id="build">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">06 / What I build</div>
+        <div class="kicker">06 / The Lab</div>
         <div>
           <h2>Built out of <em>curiosity.</em></h2>
           <p class="lead">
-            A running list of projects that exist because I wanted to know whether I could. Several
-            of them turned into things I now teach professionally, which was not the plan.
+            Stay curious: build the thing you are wondering about, and see what happens. That is the
+            whole practice. This is the running list of what has come out of it. Several of these
+            turned into things I now teach professionally, which was not the plan. Filter by what
+            you are looking for, or just scroll.
           </p>
         </div>
       </div>
 
+      <div class="filters" role="group" aria-label="Filter projects by category">
+        <button class="filter active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="ai">AI &amp; Workflows</button>
+        <button class="filter" type="button" data-filter="games">Games &amp; Audio</button>
+        <button class="filter" type="button" data-filter="writing">Writing &amp; Strategy</button>
+      </div>
+
       <div class="projects">
-        <article class="project wide">
+        <article class="project wide" data-category="ai">
           <div class="project-badge"><img src="assets/doc-sodclaw.png" alt="Doc, the mascot I gave my orchestrator" loading="lazy"></div>
           <div class="tag">Agent infrastructure · SodClaw</div>
           <div>
@@ -463,7 +497,7 @@
           <div class="go">Built and maintained continuously · <a href="https://github.com/kevin-sotka/SodClaw">github.com/kevin-sotka/SodClaw</a></div>
         </article>
 
-        <article class="project">
+        <article class="project" data-category="games">
           <div class="project-badge"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 20h12l4 6h8l4-6h8v4l-4 14H10L6 24z" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="17" cy="29" r="2.4" fill="var(--acid)"/><circle cx="31" cy="29" r="2.4" fill="var(--orange)"/></svg></div>
           <div class="tag">Games</div>
           <div>
@@ -473,7 +507,7 @@
           <div class="go"><a href="https://hitfactory.games">hitfactory.games</a></div>
         </article>
 
-        <article class="project">
+        <article class="project" data-category="ai games">
           <div class="project-badge"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="30" width="36" height="4" fill="var(--ink)"/><path d="M12 30l3-8h18l3 8" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/><rect x="19" y="12" width="10" height="10" fill="none" stroke="var(--ink)" stroke-width="2.5"/><circle cx="34" cy="10" r="2.6" fill="var(--orange)"/><path d="M34 10l3.5-3.5M34 10l4.5.5M34 10l-.5 4.5" stroke="var(--orange)" stroke-width="2" stroke-linecap="round"/></svg></div>
           <div class="tag">Game pipeline</div>
           <div>
@@ -483,7 +517,7 @@
           <div class="go">In active use</div>
         </article>
 
-        <article class="project">
+        <article class="project" data-category="ai games">
           <div class="project-badge"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="19" width="17" height="21" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/><rect x="15" y="13" width="17" height="21" fill="var(--acid)" stroke="var(--ink)" stroke-width="2"/><rect x="23" y="7" width="17" height="21" fill="var(--orange)" stroke="var(--ink)" stroke-width="2"/></svg></div>
           <div class="tag">Batch pipeline</div>
           <div>
@@ -493,7 +527,7 @@
           <div class="go">Runs in batches</div>
         </article>
 
-        <article class="project">
+        <article class="project" data-category="ai">
           <div class="tag">Small tools</div>
           <div>
             <h3>Fantasy sports, held together with spreadsheets</h3>
@@ -502,7 +536,7 @@
           <div class="go">Ongoing, seasonally</div>
         </article>
 
-        <article class="project">
+        <article class="project" data-category="writing">
           <div class="tag">Research and writing</div>
           <div>
             <h3>Four generations, in Finnish parish records</h3>
@@ -511,7 +545,7 @@
           <div class="go">In progress, slowly</div>
         </article>
 
-        <article class="project">
+        <article class="project" data-category="ai writing">
           <div class="project-badge"><img src="assets/mbm-cover.jpg" alt="The cover of the novel I'm drafting" loading="lazy"></div>
           <div class="tag">Fiction, one chapter at a time</div>
           <div>
@@ -607,8 +641,26 @@
 
 <footer class="wrap site-footer">
   <div>© 2026 Kevin Sotka · Vancouver, WA</div>
-  <div class="small">LEARN / TEACH / BE CURIOUS</div>
+  <div class="small">LEARN / TEACH / CREATE</div>
 </footer>
+
+<script>
+  (function(){
+    var filters = document.querySelectorAll('.filter');
+    var projects = document.querySelectorAll('.project');
+    filters.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        filters.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var f = btn.dataset.filter;
+        projects.forEach(function(p){
+          var cats = (p.dataset.category || '').split(' ');
+          p.hidden = f !== 'all' && cats.indexOf(f) === -1;
+        });
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
