@@ -44,7 +44,10 @@
 
     /* hero */
     .hero{padding:74px 0 68px}
+    .hero-head{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
     .hero-top{max-width:760px}
+    .hero-photo{flex:0 0 auto;width:230px;margin-top:6px}
+    .hero-photo img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--ink);border-radius:2px;background:var(--white);padding:10px;transform:rotate(-2.2deg);box-shadow:11px 11px 0 var(--acid)}
     .eyebrow{display:inline-flex;align-items:center;gap:9px;font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:26px}
     .dot{width:9px;height:9px;background:var(--orange);border-radius:50%;display:inline-block}
     h1{font-size:clamp(54px,7.6vw,112px);line-height:.88;letter-spacing:-.075em;margin:0 0 32px;font-weight:900}
@@ -221,6 +224,9 @@
       .hero-fork,.section-head,.about,.cta-inner,.elsewhere-inner,.callout,.signals{grid-template-columns:1fr}
       .hero{padding-top:54px}
       .hero-card{max-width:470px}
+      .hero-head{gap:24px}
+      .hero-photo{width:130px;margin-top:0}
+      .hero-photo img{padding:6px;box-shadow:7px 7px 0 var(--acid)}
       .callout{gap:20px}
       .pillars,.phases,.quote-grid,.formats{grid-template-columns:1fr}
       section{padding:74px 0}
@@ -235,6 +241,7 @@
       .signal-grid{grid-template-columns:repeat(2,1fr)}
       .hero-card{transform:none;box-shadow:9px 9px 0 var(--orange)}
       .card-big{font-size:46px}
+      .hero-photo{display:none}
     }
   </style>
 </head>
@@ -255,13 +262,18 @@
 <main>
 
   <div class="wrap hero">
-    <div class="hero-top">
-      <div class="eyebrow"><i class="dot"></i> Strategy / AI enablement / programs / operations</div>
-      <h1>Learn.<br>Teach.<br><em>Create.</em></h1>
-      <p class="hero-copy">
-        I have built a career out of noticing the gap between how work gets done and how it could
-        be done, and then being the person who steps in to close it. Lately that splits two ways.
-      </p>
+    <div class="hero-head">
+      <div class="hero-top">
+        <div class="eyebrow"><i class="dot"></i> Strategy / AI enablement / programs / operations</div>
+        <h1>Learn.<br>Teach.<br><em>Create.</em></h1>
+        <p class="hero-copy">
+          I have built a career out of noticing the gap between how work gets done and how it could
+          be done, and then being the person who steps in to close it. Lately that splits two ways.
+        </p>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/headshot.jpg" alt="Kevin Sotka" width="230" height="230" loading="eager">
+      </div>
     </div>
 
     <div class="hero-fork">
