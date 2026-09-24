@@ -46,7 +46,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&display=swap" rel="stylesheet">
   <style>
     :root{
       --ink:#10110f;
@@ -58,7 +58,7 @@
       --line:rgba(16,17,15,.16);
       --white:#fffdf7;
       --serif:Georgia,"Times New Roman",serif;
-      --sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+      --sans:Archivo,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
       --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
     }
     *{box-sizing:border-box}
@@ -155,6 +155,11 @@
     .callout{border:1px solid var(--ink);background:var(--acid);padding:34px;display:grid;grid-template-columns:.4fr 1.6fr;gap:36px;align-items:end;margin-top:56px}
     .callout .lbl{font:700 13px var(--mono);text-transform:uppercase;letter-spacing:.08em}
     .callout .line{font-family:var(--serif);font-style:italic;font-size:clamp(26px,3.6vw,48px);line-height:1.04;letter-spacing:-.02em}
+    .fieldnote{border:1px solid var(--ink);background:var(--white);padding:34px;display:grid;grid-template-columns:.4fr 1.6fr;gap:36px;margin-top:56px;box-shadow:8px 8px 0 var(--orange)}
+    .fieldnote .lbl{font:700 13px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+    .fieldnote p{margin:0;font-size:18px;line-height:1.5;max-width:64ch;color:var(--ink-70)}
+    .fieldnote p + p{margin-top:14px}
+    .fieldnote strong{color:var(--ink)}
 
     /* proof */
     .proof{background:var(--ink);color:var(--paper)}
@@ -257,13 +262,13 @@
     }
     @media(max-width:850px){
       .navlinks{display:none}
-      .hero-fork,.section-head,.about,.cta-inner,.elsewhere-inner,.callout,.signals{grid-template-columns:1fr}
+      .hero-fork,.section-head,.about,.cta-inner,.elsewhere-inner,.callout,.fieldnote,.signals{grid-template-columns:1fr}
       .hero{padding-top:54px}
       .hero-card{max-width:470px}
       .hero-head{gap:24px}
       .hero-photo{width:130px;margin-top:0}
       .hero-photo img{padding:6px;box-shadow:7px 7px 0 var(--acid)}
-      .callout{gap:20px}
+      .callout,.fieldnote{gap:20px}
       .pillars,.phases,.quote-grid,.formats{grid-template-columns:1fr}
       section{padding:74px 0}
     }
@@ -315,18 +320,18 @@
     <div class="hero-fork">
       <div class="fork-path fork-corp">
         <div class="fork-label">Learn. Teach.</div>
-        <p>I train corporate teams to use AI productively in their own work, without the slop.</p>
+        <p>I train corporate teams to put AI to work on the problems already on their desks.</p>
         <a class="button primary" href="training.html">Explore Corporate AI Training</a>
         <aside class="hero-card">
-          <div class="card-label">Field note / year one</div>
+          <div class="card-label">Field note / three years</div>
           <div class="card-big">$12M<small>+</small></div>
-          <div class="card-text">in additional first-year value identified by the teams I taught, using their own ideas.</div>
+          <div class="card-text">in net value over three years, identified by the teams I taught, using their own ideas.</div>
         </aside>
       </div>
 
       <div class="fork-path fork-curious">
         <div class="fork-label">Create.</div>
-        <p>When I am not training, I build games, tools, agent infrastructure, and audio, because I cannot stop.</p>
+        <p>When I am not training, I build games, tools, agent infrastructure, and audio, because building things is how I come to understand them.</p>
         <a class="button secondary" href="#build">Browse Creative Projects</a>
         <div class="scribble">Most teams already know they should be using AI.<br>What they need is a clear view of where it will actually help.</div>
       </div>
@@ -343,7 +348,7 @@
       <div class="section-head">
         <div class="kicker">01 / The work</div>
         <div>
-          <h2>Four job titles. <em>One instinct.</em></h2>
+          <h2>The same move <em>in four different jobs.</em></h2>
           <p class="lead">
             These look like four different careers on paper, and in practice they have all been the
             same move: find the thing nobody has claimed yet, understand it properly, and then do
@@ -364,7 +369,7 @@
           <div class="pillar-num">02 / ENABLEMENT</div>
           <div>
             <h3>AI enablement</h3>
-            <p>Built an AI enablement program from scratch inside a global electronics manufacturer, serving six operational functions. Non-technical teams went from curious about AI to pitching their own funded use cases.</p>
+            <p>Built an AI enablement program from scratch inside a global electronics manufacturer, serving five operational functions. Non-technical teams went from curious about AI to pitching their own use cases to the people who fund them.</p>
           </div>
         </article>
         <article class="pillar">
@@ -401,7 +406,7 @@
       <div class="stats">
         <div class="stat"><div class="num">100+</div><p>Specific AI use cases surfaced across departments and business functions.</p></div>
         <div class="stat"><div class="num">600</div><p>Person offshore operations workforce trained, driving a 200%+ turnaround-time improvement.</p></div>
-        <div class="stat"><div class="num">6</div><p>Operational functions enabled, from HR and finance to legal, supply chain, IT, and marketing.</p></div>
+        <div class="stat"><div class="num">5</div><p>Operational functions enabled: HR, finance, legal and government affairs, supply chain, and marketing.</p></div>
         <div class="stat"><div class="num">15+</div><p>Years designing and delivering training in complex service-delivery environments.</p></div>
       </div>
     </div>
@@ -425,7 +430,7 @@
         <div class="phase">
           <div class="n">PHASE 01</div>
           <h3>Discovery</h3>
-          <p>Before any workshop I learn where the team actually is. Surveys and light pre-work surface the real pain points, and the material gets rebuilt around what I find. Nothing generic survives this step.</p>
+          <p>Before any workshop I learn where the team actually is. Surveys and light pre-work surface the real pain points, and every deck gets rewritten in the group's own language before anyone sees it.</p>
         </div>
         <div class="phase">
           <div class="n">PHASE 02</div>
@@ -435,7 +440,7 @@
         <div class="phase">
           <div class="n">PHASE 03</div>
           <h3>Sustainment</h3>
-          <p>This is where most programs stop and mine keeps going. I track each use case toward development, run office hours to keep people unblocked, and recruit champions inside the team to carry it.</p>
+          <p>After the workshop I track each use case toward development, run office hours to keep people unblocked, and recruit champions inside the team to carry it.</p>
         </div>
       </div>
 
@@ -446,6 +451,24 @@
         <div class="step"><div class="step-no">04 / FUND</div><h4>Make the business case</h4><p>Put numbers on it. This is the step that turns a good idea into a funded one.</p></div>
         <div class="step"><div class="step-no">05 / TEST</div><h4>Prototype and validate</h4><p>Put it in front of real users and learn what the slides could not tell you.</p></div>
         <div class="step"><div class="step-no">06 / PROVE</div><h4>Measure and improve</h4><p>Instrument the result so the impact is provable and the next move is obvious.</p></div>
+      </div>
+
+      <div class="fieldnote">
+        <div class="lbl">Field note / from the last program</div>
+        <div>
+          <p>
+            Three participants from three unrelated functions, who never worked together, each took
+            a different problem through the six steps. They arrived at the same design: <strong>a
+            fixed template, a trusted source to ground it, a hard check the model cannot talk its way
+            past, and a named person accountable for the output.</strong>
+          </p>
+          <p>
+            None of them asked for a platform. Each asked their sponsor for a two-week test, with the
+            go/no-go thresholds and the conditions for stopping written down before it started. One
+            of them concluded that nothing needed to be built at all, and that the review step was
+            the actual product.
+          </p>
+        </div>
       </div>
 
       <div class="callout">
@@ -464,7 +487,7 @@
       <div class="section-head">
         <div class="kicker">04 / In their words</div>
         <div>
-          <h2>The numbers matter. <em>So does the room.</em></h2>
+          <h2>What it was like <em>inside the room.</em></h2>
           <p class="lead">
             Adoption happens when people feel safe enough to admit what they do not know. These are
             from participants in recent enablement workshops.
